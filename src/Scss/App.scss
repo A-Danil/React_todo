@@ -1,0 +1,131 @@
+body {
+  background-color: whitesmoke;
+}
+
+.tasks {
+  padding-top: 5rem;
+  margin: 0 auto;
+  width: 600px;
+
+  & h1 {
+    text-align: center;
+    color: rgb(49, 171, 247);
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid gray;
+    margin-bottom: 0.5rem;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid black;
+
+      & > span strong,
+      .tasks__important--btn {
+        border-right: 1px solid black;
+      }
+    }
+
+    & span strong {
+      margin-right: 10px;
+      padding-right: 5px;
+      border-right: 1px solid gray;
+    }
+  }
+
+  &__important--btn {
+    margin-left: auto;
+    margin-right: 0.5rem;
+    border-right: 1px solid gray;
+  }
+
+  &__btn--inp {
+    margin-right: 10px;
+  }
+
+  &__label {
+    margin-right: 0.5rem;
+    padding: 0px 10px;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__btn--done {
+    margin-right: 5px;
+    background-color: limegreen;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 33%;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: green;
+    }
+  }
+}
+
+.important {
+  font-weight: bold;
+  color: red;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  min-height: 49px;
+
+  &__input {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+
+    &::placeholder {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__btn {
+    min-width: 100px;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background-color: limegreen;
+    color: white;
+
+    &:hover,
+    &:focus {
+      background-color: green;
+    }
+  }
+}
+
+.no-tasks {
+  text-align: center;
+  background-color: lightcoral;
+  border-radius: 4px;
+
+  & p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+  }
+}
